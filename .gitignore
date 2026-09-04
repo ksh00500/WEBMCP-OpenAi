@@ -1,0 +1,8 @@
+node_modules
+dist
+data/users.json
+.env
+*.pem
+*.key
+data/*.tmp
+*.review-secrets
