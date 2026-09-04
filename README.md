@@ -124,3 +124,7 @@ npm run review-account
 Account data, hashed one-time tokens, OAuth records, and hashed browser sessions are stored in the ignored `data/users.json` file using atomic replacement writes. Browser sessions use a 30-day sliding lifetime and a 90-day absolute lifetime, survive Node restarts, and are invalidated by password reset. Configure SMTP with `EMAIL_MODE=smtp`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, and `SMTP_FROM`; AWS SES SMTP works with this generic configuration. The EC2 deployment adds Nginx TLS termination, request rate limiting, a systemd-managed Node service, and automatic certificate renewal. Before scaling beyond the initial low-volume deployment, migrate persistence to a managed database or established identity provider and add centralized redacted audit logging, backups, and managed secrets.
 
 Social login, OIDC identity claims, and enterprise workspace domain restrictions are intentionally excluded from the initial release. Internal email verification is only for SkillMCP account ownership and is not advertised as an OIDC `email_verified` claim.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
